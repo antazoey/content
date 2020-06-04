@@ -333,7 +333,9 @@ def search_and_install_packs_and_their_dependencies(pack_ids, client, prints_man
                                     'lock': lock})
             threads_list.append(thread)
         run_threads_list(threads_list)
-
+        # todo remove
+        print(f"Installation request: {installation_request_body}")
+        print(f"Packs to install: {packs_to_install}")
         install_packs(client, host, prints_manager, installation_request_body)
 
         return packs_to_install
